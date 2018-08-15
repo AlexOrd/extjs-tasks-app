@@ -8,7 +8,7 @@ Ext.define('TasksApp.view.main.List', {
 
     publishes: 'selModel',
     reference: 'tasksGrid',
-    // autoLoad: true,
+
     requires: [
         'TasksApp.store.Tasks'
     ],
@@ -117,32 +117,6 @@ Ext.define('TasksApp.view.main.List', {
             flex: 2,
             sortable: true,
             // renderer: 'renderChange'
-        },
-        //  {
-        //     text: '% Change',
-        //     dataIndex: 'pctChange',
-
-        //     width: 100,
-        //     sortable: true,
-        //     renderer: 'renderPercent'
-        // }, {
-        //     text: 'Last Updated',
-        //     dataIndex: 'lastChange',
-
-        //     width: 115,
-        //     sortable: true,
-        //     formatter: 'date("m/d/Y")'
-        // }, {
-        //     text: 'Rating',
-        //     dataIndex: 'rating',
-
-        //     width: 60,
-        //     sortable: true,
-        //     formatter: 'pick("A","B","C")'
-        // }
+        }
     ],
-
-    listeners: {
-        select: 'onItemSelected'
-    }
 });

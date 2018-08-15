@@ -19,6 +19,7 @@ Ext.define('TasksApp.view.main.MainController', {
                 name: taskName,
                 status: 'STOPPED'
             });
+            newTaskForm.reset();
             Ext.toast(`Created new task. [${taskName}]`);
         } else {
             Ext.Msg.alert('Warning', 'Length for text 1-255.');
@@ -36,7 +37,7 @@ Ext.define('TasksApp.view.main.MainController', {
             fn: function(btn) {
                 if (btn === 'yes') {
                     tasksGrid.store.remove(selectedTasks);
-                    Ext.toast(`Tasks removed.`);
+                    Ext.toast(`${selectedTasks.length} task(s) removed.`);
                 } else {
                     tasksGrid.setSelection();
                 }
@@ -51,10 +52,6 @@ Ext.define('TasksApp.view.main.MainController', {
             return task;
         });
         tasksGrid.store.load(updatedTasks);
-    },
-
-    onItemSelected: function (sender, record) {
-        // Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
 
     checkDateInterval: function(sender, date) {
@@ -106,10 +103,4 @@ Ext.define('TasksApp.view.main.MainController', {
             }
         });
     },
-
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
-    }
 });

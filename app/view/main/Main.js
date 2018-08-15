@@ -23,29 +23,12 @@ Ext.define('TasksApp.view.main.Main', {
     controller: 'main',
     viewModel: 'main',
 
-    // width: 880,
-    // frame: true,
-    // bodyPadding: 5,
     layout: 'column',
-
-    // fieldDefaults: {
-    //     labelAlign: 'left',
-    //     labelWidth: 90,
-    //     anchor: '100%',
-    //     msgTarget: 'side'
-    // },
-
 
     items: [
         {
         xtype: 'mainlist',
     },
-    //  {
-    //     xtype: 'tasksfieldset',
-    //     bind: {
-    //         disabled: '{isButtonDisabled}'
-    //     }
-    // },
     {
         xtype: 'tasksfieldset',
         bind: {
